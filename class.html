@@ -48,15 +48,21 @@
     console.log(wrap.children.length);
 
     wrap.addEventListener('click', function() {
-      for(let i=0; i<wrap.children.length; i++) {
-        console.log(wrap.children[i]);
-        if(wrap.classList.contains('size')){
+      if(wrap.children[0].classList.contains('size')) {
+        console.log('true scope activate!')
+        for(let i=0; i<wrap.children.length; i++) {
           wrap.children[i].classList.remove('size');
-        } else {
+        }
+        console.log('true scop loop complete!');
+      } else {
+        console.log('false scope activate!')
+        for(let i=0; i<wrap.children.length; i++) {
           wrap.children[i].classList.add('size');
         }
+        console.log('false scope loop complete!');
       }
     });
+      
 
   </script>
 </body>
