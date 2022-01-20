@@ -46,34 +46,16 @@
     
     console.dir(wrap);
     console.log(wrap.children.length);
-
-    
-    function jaehee(target, eventType, classNameOne, classNameTwo) {
+    console.dir(wrap.children[0]);
       
-      target.addEventListener( eventType, function() {
-        for(let i = 0; i < target.children.length; i++ ) {
-          if(target.classList.contains(classNameOne)){
-            target.classList.remove(classNameOne);
-            target.children[i].classList.remove(classNameTwo);
-
-          } else {
-            target.children[i].classList.add(classNameTwo);
-            target.classList.add(classNameOne);
-          }
-        }
-          
-      });
-    
-
-    }
-    jaehee(wrap, "click", "on","size");
-    // jaehee(wrap.children[i], "click", "size");
-    console.log(wrap.children[i]);
-    
-    // wrap.children[i].classList.add('size');
+    wrap.addEventListener( 'click', function() {
       
-    
-
+      for(let i=0; i<wrap.children.length; i++) {
+        wrap.children[i].style.width ='50vw';
+        wrap.children[i].style.height ='50vh';
+      };
+    });
   </script>
+
 </body>
 </html>
