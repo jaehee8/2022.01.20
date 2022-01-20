@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    #wrap {
+      width: 100vw;
+      height: 100vh;
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* transition: 1s; */
+    }
+
+    #wrap div {
+      width: 30vw;
+      height: 30vh;
+      background-color: blanchedalmond;
+      border: 1px dashed royalblue;
+    }
+
+    .on {
+      flex-direction: column;
+    }
+    .size {
+      width: 50vw;
+      height: 50vh;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+    const wrap = document.querySelector('#wrap');
+    
+    console.dir(wrap);
+    console.log(wrap.children.length);
+
+    
+    function jaehee(target, eventType, classNameOne, classNameTwo) {
+      
+      target.addEventListener( eventType, function() {
+        for(let i = 0; i < target.children.length; i++ ) {
+          if(target.classList.contains(classNameOne)){
+            target.classList.remove(classNameOne);
+            target.children[i].classList.remove(classNameTwo);
+
+          } else {
+            target.children[i].classList.add(classNameTwo);
+            target.classList.add(classNameOne);
+          }
+        }
+          
+      });
+    
+
+    }
+    jaehee(wrap, "click", "on","size");
+    // jaehee(wrap.children[i], "click", "size");
+    console.log(wrap.children[i]);
+    
+    // wrap.children[i].classList.add('size');
+      
+    
+
+  </script>
+</body>
+</html>

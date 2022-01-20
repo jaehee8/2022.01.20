@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      overflow-x: hidden;
+    }
+
+    /* ?가로스크롤 어떻게 없앨까 */
+
+    
+    #container section {
+      width: 100vw;
+      height: 100vh;
+    }
+    /* page1 영역 */
+    #page_1 {
+      background-color: antiquewhite;
+    }
+    /* 고정으로 따라다니는 내비 */
+    #nav {
+      width: 200px;
+      height: 100%;
+      /* border: 1px solid red; */
+      position: fixed;
+      background-color: indianred;
+    } 
+    /* ? 1.리스트들 가운데정렬하고 세로로 간격주기  */
+    #nav ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    } 
+    #nav ul li {
+      display: block;
+      list-style: none;
+      color: ivory;
+    }
+
+    /* page 2 영역 */
+    #page_2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: darksalmon;
+    }
+    #contents_wrap {
+      /* border: 1px solid red; */
+      background-color: rgb(250, 194, 187);
+      width: 60vw;
+      height: 50vh;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    #contents_wrap div {
+      width: 45%;
+      height: 90%;
+    }
+    #contents_wrap div:nth-child(1) {
+      background-color: silver;
+    }
+    #contents_wrap div:nth-child(2) h1 {
+      height: 20%;
+      border: 1px solid red;
+      text-align: justify;
+    }
+    #contents_wrap div:nth-child(2) p {
+      height: 70%;
+      margin-top: 10px;
+      border: 1px solid red;
+      text-align: justify;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <section id="page_1">
+      <div id="nav">
+        <ul>
+          <li>list-1</li>
+          <li>list-2</li>
+          <li>list-3</li>
+          <li>list-4</li>
+        </ul>
+      </div>
+    </section>
+    <section id="page_2">
+      <div id="contents_wrap">
+        <div>img</div>
+        <div>
+          <h1>title</h1>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

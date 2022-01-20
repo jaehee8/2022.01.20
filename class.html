@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    #wrap {
+      width: 100vw;
+      height: 100vh;
+      /* flex */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* transition: 1s; */
+    }
+
+    #wrap div {
+      width: 30vw;
+      height: 30vh;
+      background-color: blanchedalmond;
+      border: 1px dashed royalblue;
+    }
+
+    .on {
+      flex-direction: column;
+    }
+    .size {
+      width: 50vw;
+      height: 50vh;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <script>
+    const wrap = document.querySelector('#wrap');
+    
+    console.dir(wrap);
+    console.log(wrap.children.length);
+
+    wrap.addEventListener('click', function() {
+      for(let i=0; i<wrap.children.length; i++) {
+        console.log(wrap.children[i]);
+        if(wrap.classList.contains('size')){
+          wrap.children[i].classList.remove('size');
+        } else {
+          wrap.children[i].classList.add('size');
+        }
+      }
+      
+    });
+
+  </script>
+</body>
+</html>

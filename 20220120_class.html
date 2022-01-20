@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 class="hello">hello</h1>
+</body>
+<script>
+  const h1 =document.querySelector("h1");
+  console.dir(h1);
+  console.log(h1.classList.contains('hello'));
+  if(h1.classList.contains('hell') === true) {
+    h1.textContent = "hahaha";
+  } else {
+    h1.classList.add('bye');
+  }
+
+
+</script>
+</html>
